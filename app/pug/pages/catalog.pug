@@ -1,0 +1,22 @@
+extends ../sample/_default
+
+block tools 
+	include ../utils/_mixins
+
+block title
+	title Каталог
+
+block main
+	+section('catalog')
+		.block-catalog__grid 
+			aside.block-catalog__aside
+				.block-catalog__aside-box
+					h3.block-catalog__aside-title Фильтры
+
+					.block-catalog__aside-filters 
+						.block-catalog__aside-list-filters
+							ul 
+								li 
+
+
+			.block-catalog__grid-items
