@@ -14,9 +14,788 @@ block main
 					h3.block-catalog__aside-title Фильтры
 
 					.block-catalog__aside-filters 
-						.block-catalog__aside-list-filters
+						form#formFilterCatalog.block-catalog__aside-list-filters(action="#" method="get" name="formFilterCatalog")
 							ul 
 								li 
+									button.active(type="button")
+										span Каталог
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
 
+									div 
+										ul
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-1" name="checkbox-1")
+													span Двери с эмалевым покрытием
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-2" name="checkbox-1" checked="checked")
+													span Алюминиевые двери
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-3" name="checkbox-1")
+													span Двери под покраску и скрытие короба
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-4" name="checkbox-1")
+													span Двери с глянцевым покрытием
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-5" name="checkbox-1")
+													span Двери Unilack
+											li
+												label.checkbox
+													input(type="checkbox" id="checkbox-6" name="checkbox-1")
+													span Двери с древесным покрытием
 
-			.block-catalog__grid-items
+								li 
+									button.active(type="button")
+										span Серия
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+									div.list--btns 
+										ul
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-7" name="checkbox-2")
+													span PW
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-8" name="checkbox-2" checked="checked")
+													span PD
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-9" name="checkbox-2")
+													span PA
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-10" name="checkbox-2")
+													span P
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-11" name="checkbox-2")
+													span PE
+											li
+												label.checkbox.checkbox--button
+													input(type="checkbox" id="checkbox-12" name="checkbox-2")
+													span PM
+
+								li 
+									button.active(type="button")
+										span Цвет
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+									div 
+										ul
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Блэк
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Вайт
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3" checked="checked")
+													span Графит
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Крем Вайт
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Кремовая Магнолия
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Нэви Блу
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Перламутр белый
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Перламутр бронза
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Перламутр золото
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Санд
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Смоки
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-3")
+													span Сэнд
+
+								li 
+									button.active(type="button")
+										span Стекло
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+									div 
+										ul
+											li
+												button.active(type="button")
+													span Lacobel
+													img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+												ul 
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-44")
+															span Lacobel Белый лак
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-44")
+															span Lacobel Перламутровый лак
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-44")
+															span Lacobel Серебряный лак
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-44")
+															span Lacobel Черный лак
+											li
+												button(type="button")
+													span Триплекс
+													img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+												ul 
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-55")
+															span Белый триплекс
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-55")
+															span Черный триплекс
+											li
+												button(type="button")
+													span Зеркало
+													img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+												ul 
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-66")
+															span Зеркало
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-66")
+															span Зеркало Blue
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-66")
+															span Зеркало Bronza
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-66")
+															span Зеркало Grey
+											li
+												button(type="button")
+													span Монохром
+													img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+												ul 
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-77")
+															span Монохром белый просветленный
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-77")
+															span Монохром  гляссе
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-77")
+															span Монохром капучино
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-77")
+															span Монохром серый
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-77")
+															span Монохром черный
+											li
+												button(type="button")
+													span Нефи
+													img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+												ul 
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Нефи белый узор серебро
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Нефи черный узор золото
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Нефи черный узор серебро
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Атриум серебро
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88" checked="checked")
+															span Графит
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Лак классик
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Лоран узор золото
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Неро мрамор
+													li 
+														label.checkbox
+															input(type="checkbox" name="checkbox-88")
+															span Прозрачное
+
+								li 
+									button(type="button")
+										span Материал
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+									div 
+										ul
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5" checked="checked")
+													span Вставка
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5")
+													span Дуб Карамель
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5")
+													span Дуб Сонома
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5")
+													span Дуб Тобакко
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5")
+													span Каштан светлый
+											li
+												label.checkbox
+													input(type="checkbox" name="checkbox-5")
+													span Каштан темный
+
+								li.list-item--state
+									button(type="button")
+										span Цена
+
+									.box-price-range(data-min="38729" data-max="54760")
+										.box-price-range__fields 
+											.box-price-range__field
+												p От
+												input.box-price-range__field-min-price(type="number" placeholder="38729" value="38729")
+												p руб.
+
+											.box-price-range__field
+												p До
+												input.box-price-range__field-max-price(type="number" placeholder="54760" value="54760")
+												p руб.
+
+										.box-price-range__slider 
+
+								li 
+									button.active(type="button")
+										span Сортировать
+										img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+									div 
+										ul
+											li
+												label.checkbox
+													input(type="radio" name="radio-1" checked="checked")
+													span По умолчанию
+											li
+												label.checkbox
+													input(type="radio" name="radio-1")
+													span По алфавиту (убывание)
+											li
+												label.checkbox
+													input(type="radio" name="radio-1")
+													span По алфавиту (возрастание)
+											li
+												label.checkbox
+													input(type="radio" name="radio-1")
+													span По цене (убывание)
+											li
+												label.checkbox
+													input(type="radio" name="radio-1")
+													span По цене (возрастание)
+
+							button(type="reset" form="formFilterCatalog") Сбросить все фильтры
+
+			.block-catalog__grid-box 
+				.block-catalog__heading-wrap-filter
+					.block-catalog__box-filter
+						button.block-catalog__box-filter-btn(type="button" data-toggle="mob-filter")
+							i
+								img.icon(src="./img/icons/filter.svg" alt="")
+							span Фильтры
+
+						.block-catalog__box-filter-container
+							button.block-catalog__box-filter-container-close.d-inline-flex(type="button" data-action="close-mob-filter")
+								img.icon(src="./img/icons/close.svg", alt="")
+
+							h3.block-catalog__aside-title Фильтры
+
+							.block-catalog__aside-filters 
+								form#formFilterMobCatalog.block-catalog__aside-list-filters(action="#" method="get" name="formFilterMobCatalog")
+									ul 
+										li 
+											button(type="button")
+												span Каталог
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div 
+												ul
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-1" name="checkbox-1")
+															span Двери с эмалевым покрытием
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-2" name="checkbox-1" checked="checked")
+															span Алюминиевые двери
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-3" name="checkbox-1")
+															span Двери под покраску и скрытие короба
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-4" name="checkbox-1")
+															span Двери с глянцевым покрытием
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-5" name="checkbox-1")
+															span Двери Unilack
+													li
+														label.checkbox
+															input(type="checkbox" id="checkbox-6" name="checkbox-1")
+															span Двери с древесным покрытием
+
+										li 
+											button(type="button")
+												span Серия
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div.list--btns 
+												ul
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-7" name="checkbox-2")
+															span PW
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-8" name="checkbox-2" checked="checked")
+															span PD
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-9" name="checkbox-2")
+															span PA
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-10" name="checkbox-2")
+															span P
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-11" name="checkbox-2")
+															span PE
+													li
+														label.checkbox.checkbox--button
+															input(type="checkbox" id="checkbox-12" name="checkbox-2")
+															span PM
+
+										li 
+											button(type="button")
+												span Цвет
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div 
+												ul
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Блэк
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Вайт
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3" checked="checked")
+															span Графит
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Крем Вайт
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Кремовая Магнолия
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Нэви Блу
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Перламутр белый
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Перламутр бронза
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Перламутр золото
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Санд
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Смоки
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-3")
+															span Сэнд
+
+										li 
+											button(type="button")
+												span Стекло
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div 
+												ul
+													li
+														button.active(type="button")
+															span Lacobel
+															img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+														ul 
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-44")
+																	span Lacobel Белый лак
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-44")
+																	span Lacobel Перламутровый лак
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-44")
+																	span Lacobel Серебряный лак
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-44")
+																	span Lacobel Черный лак
+													li
+														button(type="button")
+															span Триплекс
+															img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+														ul 
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-55")
+																	span Белый триплекс
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-55")
+																	span Черный триплекс
+													li
+														button(type="button")
+															span Зеркало
+															img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+														ul 
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-66")
+																	span Зеркало
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-66")
+																	span Зеркало Blue
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-66")
+																	span Зеркало Bronza
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-66")
+																	span Зеркало Grey
+													li
+														button(type="button")
+															span Монохром
+															img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+														ul 
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-77")
+																	span Монохром белый просветленный
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-77")
+																	span Монохром  гляссе
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-77")
+																	span Монохром капучино
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-77")
+																	span Монохром серый
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-77")
+																	span Монохром черный
+													li
+														button(type="button")
+															span Нефи
+															img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+														ul 
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Нефи белый узор серебро
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Нефи черный узор золото
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Нефи черный узор серебро
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Атриум серебро
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88" checked="checked")
+																	span Графит
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Лак классик
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Лоран узор золото
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Неро мрамор
+															li 
+																label.checkbox
+																	input(type="checkbox" name="checkbox-88")
+																	span Прозрачное
+
+										li 
+											button(type="button")
+												span Материал
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div 
+												ul
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5" checked="checked")
+															span Вставка
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5")
+															span Дуб Карамель
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5")
+															span Дуб Сонома
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5")
+															span Дуб Тобакко
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5")
+															span Каштан светлый
+													li
+														label.checkbox
+															input(type="checkbox" name="checkbox-5")
+															span Каштан темный
+
+										li.list-item--state
+											button(type="button")
+												span Цена
+
+											.box-price-range(data-min="38729" data-max="54760")
+												.box-price-range__fields 
+													.box-price-range__field
+														p От
+														input.box-price-range__field-min-price(type="number" placeholder="38729" value="38729")
+														p руб.
+
+													.box-price-range__field
+														p До
+														input.box-price-range__field-max-price(type="number" placeholder="54760" value="54760")
+														p руб.
+
+												.box-price-range__slider 
+
+										li 
+											button(type="button")
+												span Сортировать по:
+												img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+											div 
+												ul
+													li
+														label.checkbox
+															input(type="radio" name="radio-1" checked="checked")
+															span По умолчанию
+													li
+														label.checkbox
+															input(type="radio" name="radio-1")
+															span По алфавиту (убывание)
+													li
+														label.checkbox
+															input(type="radio" name="radio-1")
+															span По алфавиту (возрастание)
+													li
+														label.checkbox
+															input(type="radio" name="radio-1")
+															span По цене (убывание)
+													li
+														label.checkbox
+															input(type="radio" name="radio-1")
+															span По цене (возрастание)
+
+									button(type="reset" form="formFilterMobCatalog") Сбросить все фильтры
+
+					.block-catalog__heading-filter-box 
+						button.block-catalog__heading-filter-btn-text(type="button" data-toggle="filter-series") 
+							span Серия
+							img.icon(src="./img/icons/chevron-down.svg", alt="")
+
+						.block-catalog__heading-filter-list
+							ul
+								li 
+									button(type="button") PW
+								li 
+									button.active(type="button") PD
+								li 
+									button(type="button") PA
+								li 
+									button(type="button") P
+								li 
+									button(type="button") PE
+								li 
+									button(type="button") PM
+
+							button.block-catalog__heading-filter-btn(type="button" data-toggle="filter-series")
+								img.icon(src="./img/icons/chevron-down.svg" alt="")
+
+						.block-catalog__heading-filter-container 
+							.block-catalog__heading-filter-list
+								ul 
+									li 
+										button(type="button") PW
+									li 
+										button.active(type="button") PD
+									li 
+										button(type="button") PA
+									li 
+										button(type="button") P
+									li 
+										button(type="button") PE
+									li 
+										button(type="button") PM
+									li 
+										button(type="button") AG
+									li 
+										button(type="button") AX
+									li 
+										button(type="button") AV
+									li 
+										button(type="button") AGN
+									li 
+										button(type="button") AGP
+									li 
+										button(type="button") AGK
+									li 
+										button(type="button") NE
+									li 
+										button(type="button") NA
+									li 
+										button(type="button") ZN
+									li 
+										button(type="button") XN
+									li 
+										button(type="button") N
+									li 
+										button(type="button") L
+									li 
+										button(type="button") LE
+									li 
+										button(type="button") LA
+									li 
+										button(type="button") LW
+									li 
+										button(type="button") OPA
+									li 
+										button(type="button") OZ
+									li 
+										button(type="button") M
+									li 
+										button(type="button") MA
+									li 
+										button(type="button") U
+
+								button.block-catalog__heading-filter-btn(type="button" data-action="close")
+									img.icon(src="./img/icons/x-mark.svg" alt="")
+
+					.block-catalog__heading-pagination 
+						ul 
+							li 
+								a.active(href="#") 1
+							li 
+								a(href="#") 2
+							li 
+								a(href="#") 3
+
+							li 
+								p ...
+
+							li 
+								a(href="#") 10
+
+				.block-catalog__grid-items

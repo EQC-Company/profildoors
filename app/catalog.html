@@ -7,42 +7,932 @@
     <link rel="stylesheet" href="css/main.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
     <title>Каталог</title>
   </head>
   <body>
-    <header class="header"> 
-      <div class="container"> 
-        <div class="header-inner"></div>
-      </div>
-    </header>
     <main class="main">
-      <div class="wrapper">
-        <section class="block block-catalog">
-          <div class="container">
-            <div class="block-catalog__grid"> 
-              <aside class="block-catalog__aside">
-                <div class="block-catalog__aside-box">
-                  <h3 class="block-catalog__aside-title">Фильтры</h3>
-                  <div class="block-catalog__aside-filters"> 
-                    <div class="block-catalog__aside-list-filters">
-                      <ul> 
-                        <li> </li>
-                      </ul>
+      <section class="block block-catalog">
+        <div class="container">
+          <div class="block-catalog__grid"> 
+            <aside class="block-catalog__aside">
+              <div class="block-catalog__aside-box">
+                <h3 class="block-catalog__aside-title">Фильтры</h3>
+                <div class="block-catalog__aside-filters"> 
+                  <form class="block-catalog__aside-list-filters" id="formFilterCatalog" action="#" method="get" name="formFilterCatalog">
+                    <ul> 
+                      <li> 
+                        <button class="active" type="button"><span>Каталог</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div> 
+                          <ul>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-1" name="checkbox-1"><span>Двери с эмалевым покрытием</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-2" name="checkbox-1" checked="checked"><span>Алюминиевые двери</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-3" name="checkbox-1"><span>Двери под покраску и скрытие короба</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-4" name="checkbox-1"><span>Двери с глянцевым покрытием</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-5" name="checkbox-1"><span>Двери Unilack</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" id="checkbox-6" name="checkbox-1"><span>Двери с древесным покрытием</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li> 
+                        <button class="active" type="button"><span>Серия</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div class="list--btns"> 
+                          <ul>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-7" name="checkbox-2"><span>PW</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-8" name="checkbox-2" checked="checked"><span>PD</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-9" name="checkbox-2"><span>PA</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-10" name="checkbox-2"><span>P</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-11" name="checkbox-2"><span>PE</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox checkbox--button">
+                                <input type="checkbox" id="checkbox-12" name="checkbox-2"><span>PM</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li> 
+                        <button class="active" type="button"><span>Цвет</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div> 
+                          <ul>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Блэк</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Вайт</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3" checked="checked"><span>Графит</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Крем Вайт</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Кремовая Магнолия</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Нэви Блу</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Перламутр белый</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Перламутр бронза</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Перламутр золото</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Санд</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Смоки</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-3"><span>Сэнд</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li> 
+                        <button class="active" type="button"><span>Стекло</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div> 
+                          <ul>
+                            <li>
+                              <button class="active" type="button"><span>Lacobel</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                              <ul> 
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-44"><span>Lacobel Белый лак</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-44"><span>Lacobel Перламутровый лак</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-44"><span>Lacobel Серебряный лак</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-44"><span>Lacobel Черный лак</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <button type="button"><span>Триплекс</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                              <ul> 
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-55"><span>Белый триплекс</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-55"><span>Черный триплекс</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <button type="button"><span>Зеркало</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                              <ul> 
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-66"><span>Зеркало</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-66"><span>Зеркало Blue</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-66"><span>Зеркало Bronza</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-66"><span>Зеркало Grey</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <button type="button"><span>Монохром</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                              <ul> 
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-77"><span>Монохром белый просветленный</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-77"><span>Монохром  гляссе</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-77"><span>Монохром капучино</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-77"><span>Монохром серый</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-77"><span>Монохром черный</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <button type="button"><span>Нефи</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                              <ul> 
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Нефи белый узор серебро</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Нефи черный узор золото</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Нефи черный узор серебро</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Атриум серебро</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88" checked="checked"><span>Графит</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Лак классик</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Лоран узор золото</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Неро мрамор</span>
+                                  </label>
+                                </li>
+                                <li> 
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-88"><span>Прозрачное</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li> 
+                        <button type="button"><span>Материал</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div> 
+                          <ul>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5" checked="checked"><span>Вставка</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5"><span>Дуб Карамель</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5"><span>Дуб Сонома</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5"><span>Дуб Тобакко</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5"><span>Каштан светлый</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="checkbox" name="checkbox-5"><span>Каштан темный</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="list-item--state">
+                        <button type="button"><span>Цена</span></button>
+                        <div class="box-price-range" data-min="38729" data-max="54760">
+                          <div class="box-price-range__fields"> 
+                            <div class="box-price-range__field">
+                              <p>От</p>
+                              <input class="box-price-range__field-min-price" type="number" placeholder="38729" value="38729">
+                              <p>руб.</p>
+                            </div>
+                            <div class="box-price-range__field">
+                              <p>До</p>
+                              <input class="box-price-range__field-max-price" type="number" placeholder="54760" value="54760">
+                              <p>руб.</p>
+                            </div>
+                          </div>
+                          <div class="box-price-range__slider"> </div>
+                        </div>
+                      </li>
+                      <li> 
+                        <button class="active" type="button"><span>Сортировать</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                        <div> 
+                          <ul>
+                            <li>
+                              <label class="checkbox">
+                                <input type="radio" name="radio-1" checked="checked"><span>По умолчанию</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="radio" name="radio-1"><span>По алфавиту (убывание)</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="radio" name="radio-1"><span>По алфавиту (возрастание)</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="radio" name="radio-1"><span>По цене (убывание)</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="checkbox">
+                                <input type="radio" name="radio-1"><span>По цене (возрастание)</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                    <button type="reset" form="formFilterCatalog">Сбросить все фильтры</button>
+                  </form>
+                </div>
+              </div>
+            </aside>
+            <div class="block-catalog__grid-box"> 
+              <div class="block-catalog__heading-wrap-filter">
+                <div class="block-catalog__box-filter">
+                  <button class="block-catalog__box-filter-btn" type="button" data-toggle="mob-filter"><i><img class="icon" src="./img/icons/filter.svg" alt=""></i><span>Фильтры</span></button>
+                  <div class="block-catalog__box-filter-container">
+                    <button class="block-catalog__box-filter-container-close d-inline-flex" type="button" data-action="close-mob-filter"><img class="icon" src="./img/icons/close.svg" alt=""></button>
+                    <h3 class="block-catalog__aside-title">Фильтры</h3>
+                    <div class="block-catalog__aside-filters"> 
+                      <form class="block-catalog__aside-list-filters" id="formFilterMobCatalog" action="#" method="get" name="formFilterMobCatalog">
+                        <ul> 
+                          <li> 
+                            <button type="button"><span>Каталог</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div> 
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-1" name="checkbox-1"><span>Двери с эмалевым покрытием</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-2" name="checkbox-1" checked="checked"><span>Алюминиевые двери</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-3" name="checkbox-1"><span>Двери под покраску и скрытие короба</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-4" name="checkbox-1"><span>Двери с глянцевым покрытием</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-5" name="checkbox-1"><span>Двери Unilack</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" id="checkbox-6" name="checkbox-1"><span>Двери с древесным покрытием</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li> 
+                            <button type="button"><span>Серия</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div class="list--btns"> 
+                              <ul>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-7" name="checkbox-2"><span>PW</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-8" name="checkbox-2" checked="checked"><span>PD</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-9" name="checkbox-2"><span>PA</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-10" name="checkbox-2"><span>P</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-11" name="checkbox-2"><span>PE</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox checkbox--button">
+                                    <input type="checkbox" id="checkbox-12" name="checkbox-2"><span>PM</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li> 
+                            <button type="button"><span>Цвет</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div> 
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Блэк</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Вайт</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3" checked="checked"><span>Графит</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Крем Вайт</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Кремовая Магнолия</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Нэви Блу</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Перламутр белый</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Перламутр бронза</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Перламутр золото</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Санд</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Смоки</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-3"><span>Сэнд</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li> 
+                            <button type="button"><span>Стекло</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div> 
+                              <ul>
+                                <li>
+                                  <button class="active" type="button"><span>Lacobel</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                                  <ul> 
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-44"><span>Lacobel Белый лак</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-44"><span>Lacobel Перламутровый лак</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-44"><span>Lacobel Серебряный лак</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-44"><span>Lacobel Черный лак</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <button type="button"><span>Триплекс</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                                  <ul> 
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-55"><span>Белый триплекс</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-55"><span>Черный триплекс</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <button type="button"><span>Зеркало</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                                  <ul> 
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-66"><span>Зеркало</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-66"><span>Зеркало Blue</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-66"><span>Зеркало Bronza</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-66"><span>Зеркало Grey</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <button type="button"><span>Монохром</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                                  <ul> 
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-77"><span>Монохром белый просветленный</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-77"><span>Монохром  гляссе</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-77"><span>Монохром капучино</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-77"><span>Монохром серый</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-77"><span>Монохром черный</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <button type="button"><span>Нефи</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                                  <ul> 
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Нефи белый узор серебро</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Нефи черный узор золото</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Нефи черный узор серебро</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Атриум серебро</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88" checked="checked"><span>Графит</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Лак классик</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Лоран узор золото</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Неро мрамор</span>
+                                      </label>
+                                    </li>
+                                    <li> 
+                                      <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-88"><span>Прозрачное</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li> 
+                            <button type="button"><span>Материал</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div> 
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5" checked="checked"><span>Вставка</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5"><span>Дуб Карамель</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5"><span>Дуб Сонома</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5"><span>Дуб Тобакко</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5"><span>Каштан светлый</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-5"><span>Каштан темный</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="list-item--state">
+                            <button type="button"><span>Цена</span></button>
+                            <div class="box-price-range" data-min="38729" data-max="54760">
+                              <div class="box-price-range__fields"> 
+                                <div class="box-price-range__field">
+                                  <p>От</p>
+                                  <input class="box-price-range__field-min-price" type="number" placeholder="38729" value="38729">
+                                  <p>руб.</p>
+                                </div>
+                                <div class="box-price-range__field">
+                                  <p>До</p>
+                                  <input class="box-price-range__field-max-price" type="number" placeholder="54760" value="54760">
+                                  <p>руб.</p>
+                                </div>
+                              </div>
+                              <div class="box-price-range__slider"> </div>
+                            </div>
+                          </li>
+                          <li> 
+                            <button type="button"><span>Сортировать по:</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                            <div> 
+                              <ul>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="radio" name="radio-1" checked="checked"><span>По умолчанию</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="radio" name="radio-1"><span>По алфавиту (убывание)</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="radio" name="radio-1"><span>По алфавиту (возрастание)</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="radio" name="radio-1"><span>По цене (убывание)</span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="checkbox">
+                                    <input type="radio" name="radio-1"><span>По цене (возрастание)</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                        <button type="reset" form="formFilterMobCatalog">Сбросить все фильтры</button>
+                      </form>
                     </div>
                   </div>
                 </div>
-              </aside>
+                <div class="block-catalog__heading-filter-box"> 
+                  <button class="block-catalog__heading-filter-btn-text" type="button" data-toggle="filter-series"> <span>Серия</span><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                  <div class="block-catalog__heading-filter-list">
+                    <ul>
+                      <li> 
+                        <button type="button">PW</button>
+                      </li>
+                      <li> 
+                        <button class="active" type="button">PD</button>
+                      </li>
+                      <li> 
+                        <button type="button">PA</button>
+                      </li>
+                      <li> 
+                        <button type="button">P</button>
+                      </li>
+                      <li> 
+                        <button type="button">PE</button>
+                      </li>
+                      <li> 
+                        <button type="button">PM</button>
+                      </li>
+                    </ul>
+                    <button class="block-catalog__heading-filter-btn" type="button" data-toggle="filter-series"><img class="icon" src="./img/icons/chevron-down.svg" alt=""></button>
+                  </div>
+                  <div class="block-catalog__heading-filter-container"> 
+                    <div class="block-catalog__heading-filter-list">
+                      <ul> 
+                        <li> 
+                          <button type="button">PW</button>
+                        </li>
+                        <li> 
+                          <button class="active" type="button">PD</button>
+                        </li>
+                        <li> 
+                          <button type="button">PA</button>
+                        </li>
+                        <li> 
+                          <button type="button">P</button>
+                        </li>
+                        <li> 
+                          <button type="button">PE</button>
+                        </li>
+                        <li> 
+                          <button type="button">PM</button>
+                        </li>
+                        <li> 
+                          <button type="button">AG</button>
+                        </li>
+                        <li> 
+                          <button type="button">AX</button>
+                        </li>
+                        <li> 
+                          <button type="button">AV</button>
+                        </li>
+                        <li> 
+                          <button type="button">AGN</button>
+                        </li>
+                        <li> 
+                          <button type="button">AGP</button>
+                        </li>
+                        <li> 
+                          <button type="button">AGK</button>
+                        </li>
+                        <li> 
+                          <button type="button">NE</button>
+                        </li>
+                        <li> 
+                          <button type="button">NA</button>
+                        </li>
+                        <li> 
+                          <button type="button">ZN</button>
+                        </li>
+                        <li> 
+                          <button type="button">XN</button>
+                        </li>
+                        <li> 
+                          <button type="button">N</button>
+                        </li>
+                        <li> 
+                          <button type="button">L</button>
+                        </li>
+                        <li> 
+                          <button type="button">LE</button>
+                        </li>
+                        <li> 
+                          <button type="button">LA</button>
+                        </li>
+                        <li> 
+                          <button type="button">LW</button>
+                        </li>
+                        <li> 
+                          <button type="button">OPA</button>
+                        </li>
+                        <li> 
+                          <button type="button">OZ</button>
+                        </li>
+                        <li> 
+                          <button type="button">M</button>
+                        </li>
+                        <li> 
+                          <button type="button">MA</button>
+                        </li>
+                        <li> 
+                          <button type="button">U</button>
+                        </li>
+                      </ul>
+                      <button class="block-catalog__heading-filter-btn" type="button" data-action="close"><img class="icon" src="./img/icons/x-mark.svg" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-catalog__heading-pagination"> 
+                  <ul> 
+                    <li> <a class="active" href="#">1</a></li>
+                    <li> <a href="#">2</a></li>
+                    <li> <a href="#">3</a></li>
+                    <li> 
+                      <p>...</p>
+                    </li>
+                    <li> <a href="#">10</a></li>
+                  </ul>
+                </div>
+              </div>
               <div class="block-catalog__grid-items"></div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"> 
-      <div class="container"> 
-        <div class="footer-inner"></div>
-      </div>
-    </footer>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

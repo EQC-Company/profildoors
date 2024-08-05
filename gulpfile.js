@@ -10,15 +10,15 @@
 /** Configuration for FTP and JavaScript libs **/
 const CONFIG = {
 	ftp: {
-		login: "",
-		pass: "",
-		host: "",
+		login: "c93901_dev_richer_ru",
+		pass: "bimevo35.",
+		host: "h48.netangels.ru",
 		port: 21,
 		localFiles: ["./dist/**/*"],
-		remoteFolder: "",
+		remoteFolder: "/www/profildoors_filter/",
 	},
 	JS: {
-		libs: ["app/libs/jquery/jquery.min.js"],
+		libs: [],
 	},
 };
 
